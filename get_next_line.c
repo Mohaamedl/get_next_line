@@ -10,21 +10,69 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
-#define BUFFER_SIZE
 
-char	*get_line(char *line_bak);
 
 char	*get_next_line(int fd)
 {
-	char buffer[BUFFER_SIZE];
-	char *line;
-	static char *line_bak;
+	static char	*stash;            // Static buffer holding leftover data
+	char		*buf;
+	char		*newline_pos;
+	char		*line;
+	ssize_t		bytes_read;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd > OPN_FILE)
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	line = get_line();
-
+	buf = (char *)malloc(BUFFER_SIZE + 1);
+	if (!buf)
+		return (NULL);
+	newline_pos = NULL;
+	bytes_read = 1;
+	while (!newline_pos && bytes_read > 0)
+	{
+		bytes_read = read(fd, buf, BUFFER_SIZE);
+		if (bytes_read < 0)
+		{
+			free(buf);
+			free(stash);
+			stash = NULL;
+			return (NULL);
+		}
+		buf[bytes_read] = '\0';
+		stash = ft_strjoin(stash, buf);
+		if (!stash)
+		{
+			free(buf);
+			return (NULL);
+		}
+		newline_pos = ft_strchr(stash, '\n');
+	}
+	free(buf);
+	// If nothing was read and stash is empty, clean up and return NULL (EOF)
+	if ((!stash || *stash == '\0') && bytes_read == 0)
+	{
+		free(stash);
+		stash = NULL;
+		return (NULL);
+	}
+	if (newline_pos)
+	{
+		size_t	line_len = newline_pos - stash + 1;
+		line = (char *)malloc(line_len + 1);
+		if (!line)
+			return (NULL);
+		for (size_t i = 0; i < line_len; i++)
+			line[i] = stash[i];
+		line[line_len] = '\0';
+		// Save leftover after newline
+		char *new_stash = ft_strdup(stash + line_len);
+		free(stash);
+		stash = new_stash;
+	}
+	else
+	{
+		line = stash;
+		stash = NULL;
+	}
+	return (line);
 }
-
-
 

@@ -9,17 +9,24 @@
 /*   Updated: 2025/05/19 11:56:48 by mhaddadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 #include <fcntl.h>
 #include <stdio.h>
-#include <unistd.h>
+#include "get_next_line.h"
+
 int main(void)
 {
-	int			fd;
-	int			size;
-	char		buffer[1024];	
+	int fd = open("test.txt", O_RDONLY);
+	printf("fd:%d", fd);
+	char *line;
 
-	fd = open("test.txt", O_RDONLY);
-	size = read(fd, buffer, sizeof(buffer));
-	printf("Reading %d bytes and got content: %s", size, buffer);
-	
+	while ((line = get_next_line(fd)))
+	{
+		printf("%s", line);
+		free(line);
+	}
+	close(fd);
+	return (0);
 }
+
