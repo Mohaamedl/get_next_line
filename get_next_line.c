@@ -45,10 +45,12 @@ char	*get_next_line(int fd)
 		buf[bytes_read] = '\0';
 		//printf("buf: %s", buf);
 		stash = ft_strjoin(stash, buf);
+		free(buf);
 //		printf("stash: %s", stash);
 		if (!stash)
 		{
 			free(buf);
+			free(stash);
 			return (NULL);
 		}
 		newline_pos = ft_strchr(stash, '\n');
@@ -74,10 +76,13 @@ char	*get_next_line(int fd)
 		char *new_stash = ft_strdup(stash + line_len);
 		free(stash);
 		stash = new_stash;
+		//free(new_stash);
+		//new_stash = NULL;
 	}
 	else
 	{
 		line = stash;
+		free(stash);
 		stash = NULL;
 	}
 	return (line);
