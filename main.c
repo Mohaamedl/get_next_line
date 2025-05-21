@@ -18,13 +18,12 @@
 int main(void)
 {
 	int fd = open("test.txt", O_RDONLY);
-	printf("fd:%d", fd);
 	char *line;
 
 	while ((line = get_next_line(fd)))
 	{
 		printf("%s", line);
-		free(line);
+		//free(line);
 	}
 	close(fd);
 	return (0);

@@ -16,6 +16,8 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	size;
 
+	if (!s)
+		return (0);
 	size = 0;
 	while (s[size])
 	{
@@ -56,7 +58,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	size_t	j;
 
-	if (!s1 || !s2)
+	if (!s2)
 		return (NULL);
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
