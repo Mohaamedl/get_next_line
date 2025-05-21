@@ -22,10 +22,9 @@ char	*get_next_line(int fd)
 	ssize_t		bytes_read;
 	
 //	printf("Buffer size: %d", BUFFER_SIZE);
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 )
 		return (NULL);
-
-	buf = (char *)malloc(BUFFER_SIZE + 1);
+	buf = (char *) malloc(BUFFER_SIZE + 1);
 	if (!buf)
 		return (NULL);
 	newline_pos = NULL;
@@ -45,7 +44,6 @@ char	*get_next_line(int fd)
 		buf[bytes_read] = '\0';
 		//printf("buf: %s", buf);
 		stash = ft_strjoin(stash, buf);
-		free(buf);
 //		printf("stash: %s", stash);
 		if (!stash)
 		{
@@ -67,7 +65,7 @@ char	*get_next_line(int fd)
 	if (newline_pos)
 	{
 		size_t	line_len = newline_pos - stash + 1;
-		line = (char *)malloc(line_len + 1);
+		line = (char *) malloc(line_len + 1);
 		if (!line)
 			return (NULL);
 		for (size_t i = 0; i < line_len; i++)
@@ -76,8 +74,8 @@ char	*get_next_line(int fd)
 		char *new_stash = ft_strdup(stash + line_len);
 		free(stash);
 		stash = new_stash;
-		//free(new_stash);
-		//new_stash = NULL;
+		free(new_stash);
+		new_stash = NULL;
 	}
 	else
 	{
