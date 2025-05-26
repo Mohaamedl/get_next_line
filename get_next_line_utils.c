@@ -26,31 +26,6 @@ size_t	ft_strlen(const char *s)
 	return (size);
 }
 
-void	ft_bzero(void *s, size_t n)
-{
-	char	*temp;
-
-	temp = (char *) s;
-	while (n > 0)
-	{
-		*(temp++) = 0;
-		n--;
-	}
-}
-
-void	*ft_calloc(size_t n, size_t size)
-{
-	unsigned char	*temp;
-
-	if (size && SIZE_MAX/size < n)
-		return NULL;
-	temp = malloc(n * size);
-	if (!temp)
-		return (NULL);
-	ft_bzero(temp, n * size);
-	return (temp);
-}
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
@@ -115,11 +90,11 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*substr;
+	char	*temp;
 
 	if (!s)
 		return (NULL);
@@ -127,9 +102,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (len > ft_strlen(s + start))
 		len = ft_strlen(s + start);
-	substr = ft_calloc(len + 1, sizeof(char));
+	substr = malloc((len + 1) * sizeof(char));
 	if (!substr)
 		return (NULL);
+	i = (len + 1) * sizeof(char);
+	temp = substr;
+	while (i-- > 0)
+		*(temp++) = 0;
 	i = 0;
 	while (len > i)
 	{

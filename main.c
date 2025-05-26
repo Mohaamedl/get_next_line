@@ -10,24 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include <fcntl.h>
 #include <stdio.h>
 #include "get_next_line.h"
 
-int main(void)
+int	main(void)
 {
-	//int fd = open("tests/1char.txt", O_RDONLY);
-	int fd = open("long-doc.txt", O_RDONLY);
-	char *line;
-	
+	int		fd;
+	char	*line;
+
+	fd = open("long-doc.txt", O_RDONLY);
 	while ((line = get_next_line(fd)))
 	{
 		printf("%s", line);
 		free(line);
 		line = NULL;
-	}	
+	}
 	close(fd);
 	return (0);
 }
-

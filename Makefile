@@ -16,7 +16,7 @@ $(NAME): $(OBJ)
 	$(AR) $(ARFLAGS) $@ $^
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $^ -o $@
 
 clean:
 	rm -f $(OBJ)
