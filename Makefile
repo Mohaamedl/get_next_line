@@ -21,6 +21,8 @@ $(NAME): $(OBJ)
 clean:
 	rm -f $(OBJ)
 
+bonus: all
+
 fclean: clean
 	rm -f $(NAME)
 

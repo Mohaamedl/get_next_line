@@ -25,6 +25,7 @@ size_t	ft_strlen(const char *s)
 	}
 	return (size);
 }
+
 void	ft_bzero(void *s, size_t n)
 {
 	char	*temp;
@@ -112,4 +113,28 @@ char	*ft_strchr(const char *s, int c)
 	if (s[i] == c_c)
 		return ((char *) &s[i]);
 	return (NULL);
+}
+
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	size_t	i;
+	char	*substr;
+
+	if (!s)
+		return (NULL);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	substr = ft_calloc(len + 1, sizeof(char));
+	if (!substr)
+		return (NULL);
+	i = 0;
+	while (len > i)
+	{
+		substr[i] = s[start + i];
+		i++;
+	}
+	return (substr);
 }

@@ -8,4 +8,108 @@ this is another line, second line
 8
 9
 
-big line here jnsdjnsdnj jn jnj njn jn jnj njn jnj nk nk n nj nj njn h bh bh j n nj nj n nk mkm km km km km nj nj nj n jn km km km km jn j nj n jn jn j  n ui nj  jn jio k n kjn jn oi n effefefsfsefes  end
+
+
+
+
+
+
+
+
+
+!	65	0x41	A	97	0x61	a
+34	0x22	"	66	0x42	B	98	0x62	b
+35	0x23	#	67	0x43	C	99	0x63	c
+36	0x24	$	68	0x44	D	100	0x64	d
+37	0x25	%	69	0x45	E	101	0x65	e
+38	0x26	&	70	0x46	F	102	0x66	f
+39	0x27	'	71	0x47	G	103	0x67	g
+40	0x28	(	72	0x48	H	104	0x68	h
+41	0x29	)	73	0x49	I	105	0x69	i
+42	0x2A	*	74	0x4A	J	106	0x6A	j
+43	0x2B	+
+
+fewf ef wef ew f wef ewf w ef wef we fwe f wef ew f ewf we fwe f w d fwd f d fsfsdfs f w get we f wef we big line here jnsdjnsdnj jn jnj njn jn jnj njn jnj nk nk n nj nj njn h bh bh j n nj nj n nk mkm km km km km nj nj nj n jn km km km km jn j nj n jn jn j  n ui nj  jn jio k n kjn jn oi n effefefsfsefes  end
+EXTENDED ASCII CHARACTERS
+DEC	HEX	
+CHARACTER
+
+DEC	HEX	CHARACTER	DEC	HEX	CHARACTER
+128	0x80	€	171	0xAB	«	214	0xD6	Ö
+129	0x81		172	0xAC	¬	215	0xD7	×
+130	0x82	‚	173	0xAD	­	216	0xD8	Ø
+131	0x83	ƒ	174	0xAE	®	217	0xD9	Ù
+132	0x84	„	175	0xAF	¯	218	0xDA	Ú
+133	0x85	…	176	0xB0	°	219	0xDB	Û
+134	0x86	†	177	0xB1	±	220	0xDC	Ü
+135	0x87	‡	178	0xB2	²	221	0xDD	Ý
+136	0x88	ˆ	179	0xB3	³	222	0xDE	Þ
+137	0x89	‰	180	0xB4	´	223	0xDF	ß
+138	0x8A	Š	181	0xB5	µ	224	0xE0	à
+139	0x8B	‹	182	0xB6	¶	225	0xE1	á
+140	0x8C	Œ	183	0xB7	·	226	0xE2	â
+141	0x8D		184	0xB8	¸	227	0xE3	ã
+142	0x8E	Ž	185	0xB9	¹	228	0xE4	ä
+143	0x8F		186	0xBA	º	229	0xE5	å
+144	0x90		187	0xBB	»	230	0xE6	æ
+145	0x91	‘	188	0xBC	¼	231	0xE7	ç
+146	0x92	’	189	0xBD	½	232	0xE8	è
+147	0x93	“	190	0xBE	¾	233	0xE9	é
+148	0x94	”	191	0xBF	¿	234	0xEA	ê
+149	0x95	•	192	0xC0	À	235	0xEB	ë
+150	0x96	–	193	0xC1	Á	236	0xEC	ì
+151	0x97	—	194	0xC2	Â	237	0xED	í
+152	0x98	˜	195	0xC3	Ã	238	0xEE	î
+153	0x99	™	196	0xC4	Ä	239	0xEF	ï
+154	0x9A	š	197	0xC5	Å	240	0xF0	ð
+155	0x9B	›	198	0xC6	Æ	241	0xF1	ñ
+156	0x9C	œ	199	0xC7	Ç	242	0xF2	ò
+157	0x9D		200	0xC8	È	243	0xF3	ó
+158	0x9E	ž	201	0xC9	É	244	0xF4	ô
+159	0x9F	Ÿ	202	0xCA	Ê	245	0xF5	õ
+160	0xA0	 	203	0xCB	Ë	246	0xF6	ö
+161	0xA1	¡	204	0xCC	Ì	247	0xF7	÷
+162	0xA2	¢	205	0xCD	Í	248	0xF8	ø
+163	0xA3	£	206	0xCE	Î	249	0xF9	ù
+164	0xA4	¤	207	0xCF	Ï	250	0xFA	ú
+165	0xA5	¥	208	0xD0	Ð	251	0xFB	û
+166	0xA6	¦	209	0xD1	Ñ	252	0xFC	ü
+167	0xA7	§	210	0xD2	Ò	253	0xFD	ý
+168	0xA8	¨	211	0xD3	Ó	254	0xFE	þ
+169	0xA9	©	212	0xD4	Ô	255	0xFF	ÿ
+170	0xAA	ª	213	0xD5	Õ	 	 	 
+If you've ever heard the term "Chinese Alphabet," you may be surprised to learn that the Chinese language doesn't actually have an alphabet like English, Spanish, Arabic, etc. Instead, it uses a complex system of characters. In this article, you'll explore the Chinese characters, their history, special features, and how they are Romanized using Pinyin.
+
+What Are Chinese Characters
+Chinese characters are symbols used to represent words or meanings. They form the written part of the Chinese language, and you'll find over 3,000 of them in common use. Characters are made up of radicals and strokes. Radicals are the building blocks, and strokes are the lines that make up those blocks.  
+
+Each Chinese character represents a word or a meaningful part of a word. Characters can be classified into Simplified and Traditional forms, with Simplified characters being used mainly in mainland China. Trying to write English to Chinese letters, you will find that some of them are words themselves:  
+Chinese alphabet
+
+English Letter	Chinese Symbol with the same sound	Sound	Meaning in Chinese
+A	诶	ēi	An interjection used to express surprise or get someone's attention, similar to "Hey!" or "Oh!"
+B	比	bǐ	A preposition meaning "compared to" or "than."
+C	西	xī	The character for "west."
+D	迪 	dí	No meaning.
+E	伊 	yī	A pronoun used to refer to a third person, similar to "he," "she," or "it."
+F	艾弗	ài fú	No meaning.
+G	吉	jí	Often used as an abbreviation for "吉祥" (jíxiáng), which means "auspicious" or "fortunate."
+H	艾尺	ài chǐ	No meaning.
+I	艾	ài	No meaning.
+J	杰	jié	A common given name meaning "outstanding" or "heroic."
+K	开	kāi	A verb meaning "to open" or "to start."
+L	艾勒	ài lè	No meaning.
+M	艾马	ài mǎ	No meaning.
+N	艾娜	ài nà	A feminine given name that could be a variant of "Anna."
+O	哦	ó	An interjection used to show understanding or acknowledgment, similar to "Oh," "I see," or "Okay."
+P	屁	pì	A somewhat informal and slightly rude term meaning "fart."
+Q	吉吾	jí wú	No meaning.
+R	艾儿	ài ér	No meaning.
+S	艾丝	ài sī	No meaning.
+T	提	tí	A verb meaning "to lift" or "to raise."
+U	伊吾	yī wú	A city in China, also spelled Yiwu.
+V	维	wéi	Often used in compound words, such as "维持" (wéichí) meaning "to maintain" or "to sustain."
+W	豆贝尔维	dòu bèi ěr wéi	No meaning.
+X	艾克斯 	yī kè sī	A transliteration of the English letter "X."
+Y	吾艾	wú ài	No meaning.
+Z	贼德 	zéi dé	No meaning.
