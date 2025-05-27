@@ -22,13 +22,13 @@ char	*ft_free_all(char **buf, char **stash)
 
 void	*ft_init(int *fd, char **buf, char **newline_pos, ssize_t *bytes_read)
 {
-	if (*fd < 0 || BUFFER_SIZE <= 0 || *fd >= MAX_OPEN)
+	if (*fd < 0 || BUFFER_SIZE <= 0 || *fd >= MAX_OPEN || read(*fd, 0, 0) < 0)
 		return (NULL);
 	*buf = (char *) malloc(BUFFER_SIZE + 1);
 	if (!*buf)
 		return (NULL);
 	*newline_pos = NULL;
-	*bytes_read = 1;
+	*bytes_read = 42;
 	return (" ");
 }
 
