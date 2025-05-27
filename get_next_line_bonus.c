@@ -29,7 +29,7 @@ void	*ft_init(int *fd, char **buf, char **newline_pos, ssize_t *bytes_read)
 		return (NULL);
 	*newline_pos = NULL;
 	*bytes_read = 1;
-	return ("");
+	return (" ");
 }
 
 char	*ft_newline(char **buf, char **stash, char **line, char *newline_pos)
@@ -72,7 +72,7 @@ char	*get_next_line(int fd)
 			return (ft_free_all(&buf, &stash[fd]));
 		buf[bytes_read[fd]] = '\0';
 		newline_pos = stash[fd];
-		stash[fd] = ft_strjoin(stash[fd], buf);
+		stash[fd] = ft_strjoin(newline_pos, buf);
 		free(newline_pos);
 		if (!stash[fd])
 			return (ft_free_all(&buf, &stash[fd]));
