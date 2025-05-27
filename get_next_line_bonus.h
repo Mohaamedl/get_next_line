@@ -10,15 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 99999
 # endif
 
 # ifndef MAX_OPEN
-#  define MAX_OPEN
+#  define MAX_OPEN 1024
 # endif
 
 # include <unistd.h>
